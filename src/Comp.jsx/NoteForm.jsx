@@ -17,8 +17,11 @@ function NoteForm({onSubmit1,title="",
     onSubmit1({title:t1,markdown:m1});
     navigate("..");
   }
+  function handleCancel(){
+    navigate("..");
+  }
   return (
-    <Form >
+    <Form className="forms">
     <Stack gap={5}>
       <Row>
       <Col>
@@ -42,12 +45,15 @@ defaultValue={markdown}
       </Form.Group>
       </Stack>
       
-      <Stack direction="horizontal" gap={3} className="justify-content-end mt-3"> 
+      <Stack direction="horizontal" gap={4}className="justify-content-end mt-3"> 
        <Link to="/">
-         <Button  variant="outline-primary" type="submit" onClick={handleClick}>Save</Button>
+         <Button
+  className="button1" 
+  variant="outline-primary" type="submit" onClick={handleClick}>Save</Button>
          </Link>
       
-        <Button  variant="outline-danger" type="button" >Cancel</Button>
+        <Button 
+          className="button2" variant="outline-danger" onClick={handleCancel} type="button" >Cancel</Button>
         
       </Stack>
     </Form>

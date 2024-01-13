@@ -16,12 +16,12 @@ function NoteList({notes}){
     <>
     <Row className="align-items-center mb-4">
     <Col>
-    <h1>Home</h1>
+    <h1 className="heading">Home</h1>
     </Col>
     <Col xs="auto">
     <Link to="/new">
-     <Button
-       type="button" variant="primary">Create </Button>
+     <Button className="buttons"
+   height="5.5vh"    type="button" variant="primary">Create </Button>
     </Link>
     </Col>
     </Row>

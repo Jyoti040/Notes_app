@@ -5,7 +5,7 @@ import { UseNote} from "./NotesLayout.jsx"
     const note=UseNote();
     return (
       <div>
-      <h1 className="mb-4">Edit Note</h1>
+      <h1 className="heading mb-4">Edit Note</h1>
       <NoteForm onSubmit1={data=> onSubmit2(note.id,data)} 
 title ={note.data.title} 
 markdown={note.data.markdown}/>
