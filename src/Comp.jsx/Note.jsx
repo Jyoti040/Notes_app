@@ -9,33 +9,37 @@ function Note({DeleteNote}){
   }
   return (
     <>
-    <Row className="align-items-center mb-4">
+    <Row className="align-items-center m-4">
     <Col>
-    <h1>{note.data.title}</h1>
+    <h1 className="heading1 m-3">{note.data.title}</h1>
     </Col>
       
     <Col xs="auto">
       <Stack direction="horizontal" gap={2}>
     <Link to={`/${note.id}/edit`}>
-     <Button
-className="buttons" 
-
-       type="button" variant="primary">Edit </Button>
-    </Link>
+    
       
-     <Button 
-       className="buttons" 
-       onClick={onDelete}type="button" variant="outline-danger"> Delete</Button>
-
-      <Link to="/">
-     <Button type="button" 
-       className="buttons" 
-       variant="outline-secondary"> Back</Button>
+<Button
+className="buttons mt-3"
+type="button"
+style={{backgroundColor: "#370140"}}>Edit</Button>
     </Link>
+
+<Button 
+className="buttons mt-3"
+onClick={onDelete}
+type="button p-3"
+style={{backgroundColor: "#370140"}}>Delete</Button>
+<Link to="/">
+<Button
+type="button"
+className="buttons mt-3"
+style={{backgroundColor: "#370140"}}>Back</Button>
+</Link>     
         </Stack>
     </Col>
     </Row>
-      <ReactMarkdown>{note.data.markdown}</ReactMarkdown>
+      <ReactMarkdown className="data m-3">{note.data.markdown}</ReactMarkdown>
     </>
   );
 }

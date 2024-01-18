@@ -45,17 +45,20 @@ defaultValue={markdown}
       </Form.Group>
       </Stack>
       
+      
+
       <Stack direction="horizontal" gap={4}className="justify-content-end mt-3"> 
        <Link to="/">
          <Button
-  className="button1" 
-  variant="outline-primary" type="submit" onClick={handleClick}>Save</Button>
+  className="b1" 
+  type="submit" onClick={handleClick} style={{backgroundColor: "#370140"}}>Save</Button>
          </Link>
       
         <Button 
-          className="button2" variant="outline-danger" onClick={handleCancel} type="button" >Cancel</Button>
+          className="b2" onClick={handleCancel} type="button" style={{backgroundColor: "#370140"}}>Cancel</Button>
         
       </Stack>
+
     </Form>
   );
 }

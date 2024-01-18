@@ -19,10 +19,9 @@ function NoteList({notes}){
     <h1 className="heading">Home</h1>
     </Col>
     <Col xs="auto">
-    <Link to="/new">
-     <Button className="buttons"
-   height="5.5vh"    type="button" variant="primary">Create </Button>
-    </Link>
+            <Link to="/new">
+        <Button className="buttons" style={{backgroundColor: "#370140"}} type="button">Create</Button>
+      </Link>
     </Col>
     </Row>
 

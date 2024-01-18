@@ -8,12 +8,12 @@
   
   
     font-family: 'Open Sans', sans-serif;
-    margin:0; padding:10;
+    margin:0; padding:0;
     box-sizing: border-box;
     text-transform: capitalize;
     text-decoration: none;
     transition: all .5s cubic-bezier(.37,1.14,.26,1.24);
-  font-size:4vh;
+  
 }
 
 *::selection{
@@ -29,16 +29,21 @@ html{
   
 
 /* Add a background color and some padding to the body */
-body {
-  background-color: #f4f4f4
+#root{
+  padding:0;
+  margin:0;
+  height: 100%;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  background-image: linear-gradient( #C79FFF, #A1B8FE);
 }
 
 /* Style the heading with a different font and color */
 .heading {
   font-family: 'Open Sans', sans-serif;
   font-size: 4rem;
-  font-weight: bold;
-  color: #333;
+
+  color: #fff9ff;
 }
 
 /* Style the form controls */
@@ -46,30 +51,41 @@ body {
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 5px;
-  padding: 20px;
+  padding:20px;
+  font-size: 2rem;
   margin-bottom: 20px;
+  font-color : #e8e8e8;
 }
 
 
-.button1 {
+.b1 {
   float:left;
   width:50px;
   font-size: 10px;
-  
+  background-color : #370140;
+  border-color : #370140;
+  color : #370140 ; 
 }
-.button2{
+.b2{
   width:50px;
   font-size: 10px;
-  
+  background-color : #370140;
+  border-color : #370140;
+  color : #370140 ;
 }
 .buttons{
   width:50px;
+  background-color : #370140;
+  border-color : #370140;
+  colour : #346472;
+
 }
 
 .card {
-  background-color: #fff;
+  background-color: #f7f7f7;  
   border: 1px solid #ddd;
   border-radius: 8px;
+  font-color : #e8e8e8;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -80,4 +96,20 @@ body {
 
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  
+.forms label ,  
+.forms input
+,  
+.forms textarea{
+  color: gray;
+}
+
+.heading1{
+  font-size: 3rem;
+}
+.data{
+  
+  font-size: 2rem;
 }
