@@ -3,6 +3,7 @@ import React from  'react';
 import styles from "./NoteList.module.css"
 import {useState,useMemo} from "react"
 import {Link } from "react-router-dom";
+
 function NoteList({notes}){
   const [title,setTitle]=useState("");
   const filteredNote= useMemo(
@@ -14,13 +15,13 @@ function NoteList({notes}){
   );
   return (
     <>
-    <Row className="align-items-center mb-4">
+    <Row className={`main align-items-center mb-4 ${styles.main}`}>
     <Col>
-    <h1 className="heading">Home</h1>
+    <h1 className={`heading ${styles.heading}`}>Home</h1>
     </Col>
     <Col xs="auto">
             <Link to="/new">
-        <Button className="buttons" style={{backgroundColor: "#370140"}} type="button">Create</Button>
+        <Button className={`buttons ${styles.buttons}`} type="button">Create</Button>
       </Link>
     </Col>
     </Row>
@@ -30,8 +31,8 @@ function NoteList({notes}){
       }}>
       <Form.Group controlId="title">
         <Form.Label></Form.Label>
-        <Form.Control placeholder ="Search notes" value={title} 
-          onChange={(e)=>{setTitle(e.target.value)}}
+        <Form.Control placeholder ="Search notes"  value={title} 
+        className={styles.customPlaceholder} onChange={(e)=>{setTitle(e.target.value)}}
           /> 
         </Form.Group>
       </Form>

@@ -2,6 +2,7 @@ import {Row, Col, Button,Stack} from "react-bootstrap"
 import { UseNote} from "./NotesLayout.jsx"
 import ReactMarkdown from "react-markdown"
 import {Link} from "react-router-dom"
+import './Note.css'
 function Note({DeleteNote}){
   const note=UseNote();
   function onDelete(){

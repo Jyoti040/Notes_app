@@ -2,6 +2,7 @@ import {Form, Col ,Row , Stack ,Button } from 'react-bootstrap';
 
 import ReactDOM from "react-dom/client";
 import {useRef,useState,useHistory}  from "react"
+import './NoteForm.css'
 import {Link ,useNavigate, Navigate} from "react-router-dom"
 function NoteForm({onSubmit1,title="",
                    markdown=""}){
@@ -9,6 +10,9 @@ function NoteForm({onSubmit1,title="",
   const titleRef=useRef(null);
  const markdownRef=useRef(null);
   
+  const styles1={backgroundColor: "#370140", height:'3.5em' , width : '7em', fontSize:'1.5vh'}
+  const styles2={fontSize:'3vh'}
+  const styles3={fontSize:'2.5vh'}
   
   function handleClick(e){
     e.preventDefault();
@@ -21,14 +25,15 @@ function NoteForm({onSubmit1,title="",
     navigate("..");
   }
   return (
-    <Form className="forms">
+    <div className='form-container'>
+    <Form className="forms" >
     <Stack gap={5}>
       <Row>
       <Col>
       <Form.Group controlId="title">
-        <Form.Label>Title</Form.Label>
+        <Form.Label style={styles2}>Title</Form.Label>
         <Form.Control required
-          
+          style={styles3}
 ref={titleRef} defaultValue={title}
       />
       </Form.Group>
@@ -36,9 +41,9 @@ ref={titleRef} defaultValue={title}
       </Row>
 
       <Form.Group controlId="markdown">
-        <Form.Label>Body</Form.Label>
+        <Form.Label style={styles2}>Body</Form.Label>
         <Form.Control required     as="textarea" rows={10}
-          
+          style={styles3}
       ref={markdownRef}
 defaultValue={markdown}
                 />
@@ -51,15 +56,16 @@ defaultValue={markdown}
        <Link to="/">
          <Button
   className="b1" 
-  type="submit" onClick={handleClick} style={{backgroundColor: "#370140"}}>Save</Button>
+  type="submit" onClick={handleClick} style={styles1}>Save</Button>
          </Link>
       
         <Button 
-          className="b2" onClick={handleCancel} type="button" style={{backgroundColor: "#370140"}}>Cancel</Button>
+          className="b2" onClick={handleCancel} type="button" style={styles1}>Cancel</Button>
         
       </Stack>
 
     </Form>
+    </div>
   );
 }
 
